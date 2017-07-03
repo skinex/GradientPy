@@ -11,11 +11,11 @@ lst = np.zeros((256, 1, 3), dtype=np.uint8)
 for i in range(256):
     for j in range(3):
        lst[i,0,j] = 255-i
-       res_img=cv2.LUT(img,lst)
-       cv2.imwrite("gradient.jpg", res_img)
-       pixmap = QPixmap("gradient.jpg")
-       self.ui.label_2.setPixmap(pixmap)
-       self.ui.groupBox_2.setVisible(True)
+res_img=cv2.LUT(img,lst)
+cv2.imwrite("gradient.jpg", res_img)
+pixmap = QPixmap("gradient.jpg")
+self.ui.label_2.setPixmap(pixmap)
+self.ui.groupBox_2.setVisible(True)
 ```
 MultiChanell
 ```python
